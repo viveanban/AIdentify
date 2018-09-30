@@ -14,7 +14,6 @@ import {forEach} from "@angular/router/src/utils/collection";
 export class HomeComponent implements OnInit {
   prediction: Prediction;
   image: Image = new Image('');
-  buttonText: string = 'Choose File';
 
   imgUrl: string;
   constructor(private cusVisionService: CustomVisionService) { }
@@ -22,7 +21,7 @@ export class HomeComponent implements OnInit {
   }
 
   sendRequest(event: any){
-    alert('sent request: '+event);
+    //alert('sent request: '+event);
     this.image.Url = event;
     this.predict(this.image);
   }
@@ -31,7 +30,7 @@ export class HomeComponent implements OnInit {
     this.cusVisionService.predict(img).subscribe((value =>
     {
       value = value as Response;
-      alert(JSON.stringify(value));
+      //alert(JSON.stringify(value));
       //this.prediction = value.prediction.probability;
 /*
 * ,"predictions":[{"probability":0.000152519176,"tagId":"0b5eb028-b7e0-4826-937f-0a1e22114c0e","tagName":"Abhijit Bottle"},
