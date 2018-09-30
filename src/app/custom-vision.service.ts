@@ -18,6 +18,6 @@ export class CustomVisionService {
   img: Image = new Image('https://cdn.shopify.com/s/files/1/0281/7544/products/Teal-1_1024x.progressive.jpg?v=1510702733');
 
   predict(): Observable<any>{
-    return this.http.post('https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Prediction/84d8da94-beef-4bbb-b45c-bc57c4324350/url?iterationId=160628af-a4d8-4cf8-bbd4-0a64cfe2b919',this.img, httpOptions);
+    return this.http.post('https://southcentralus.api.cognitive.microsoft.com/customvision/v2.0/Response/84d8da94-beef-4bbb-b45c-bc57c4324350/url?iterationId=160628af-a4d8-4cf8-bbd4-0a64cfe2b919',this.img, httpOptions);
   }
 }
