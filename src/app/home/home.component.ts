@@ -14,10 +14,15 @@ import {forEach} from "@angular/router/src/utils/collection";
 export class HomeComponent implements OnInit {
   prediction: Prediction;
   image: Image = new Image('');
+  fafa: boolean = false;
 
   imgUrl: string;
   constructor(private cusVisionService: CustomVisionService) { }
   ngOnInit() {
+  }
+
+  fafachange(){
+    this.fafa = !this.fafa;
   }
 
   sendRequest(event: any){

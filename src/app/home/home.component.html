@@ -4,8 +4,8 @@
       1. Choose File
       <i class="material-icons">perm_media</i>
     </label>
-    <input type="file" id="fileinput">
-    <button mat-raised-button onclick="uploadFiles()"> 2. Upload</button>
+    <input type="file" id="fileinput" [ngModel]="fafa" (ngModelChange)="fafachange()">
+    <button mat-raised-button onclick="uploadFiles()" [ngClass]="{supa:fafa}"> 2. Upload</button>
   </div>
   <div class="item2">
     <mat-card style="height: 50vh; padding: 0;">
@@ -17,7 +17,7 @@
     <mat-card>
       <mat-card-title>Response</mat-card-title>
       <mat-card-content>
-        <input type="text" #uri id="urlDisplay"/>
+        <input type="text" #uri id="urlDisplay" style="width: 350px; height: 30px" />
         <button mat-raised-button (click)="sendRequest(uri.value)">3. Search</button>
         <h2 id="final"></h2>
       </mat-card-content>
