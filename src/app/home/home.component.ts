@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CustomVisionService} from "../custom-vision.service";
+import {Image} from "../Image";
 
 @Component({
   selector: 'app-home',
@@ -13,8 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  predict(img: Image){
-    this.cusVisionService.predict();
+  predict(event){
+    this.cusVisionService.predict(event).subscribe((value => console.log(JSON.stringify(value))));
   }
 
 }
