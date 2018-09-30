@@ -1,13 +1,14 @@
 <div class="container">
   <div class="item1">
-    <label for="fileinput" class="custom-file-upload"><i class="material-icons">
-      perm_media
-    </i> Upload Image File</label>
+    <label for="fileinput" class="custom-file-upload"><i class="material-icons">perm_media</i>
+      {{buttonText}}
+    </label>
     <input type="file" id="fileinput" (change)="sendRequest($event)">
+    <button mat-raised-button onclick="uploadFiles()">Upload</button>
   </div>
   <div class="item2">
     <mat-card style="height: 50vh; padding: 0;">
-      <img *ngIf="image.getUrl(); else noimg" src="{{image.getUrl()}}">
+      <img *ngIf="image.Url; else noimg" src={{image.Url}}>
       <ng-template #noimg> <div class="imageBorder"><p>Please Upload an Image.</p></div></ng-template>
     </mat-card>
   </div>

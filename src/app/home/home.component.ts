@@ -13,14 +13,13 @@ import { uploadFiles } from '../../scripts/home.js';
 export class HomeComponent implements OnInit {
   prediction: Prediction;
   image: Image = new Image('');
+  buttonText: string = 'Choose File';
   constructor(private cusVisionService: CustomVisionService) { }
   ngOnInit() {
   }
 
-  sendRequest(event){
-    uploadFiles();
-    event = event as Image;
-    this.image = event;
+  sendRequest(img: Image){
+    this.image = img;
     this.predict(this.image);
   }
 

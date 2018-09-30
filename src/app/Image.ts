@@ -1,5 +1,5 @@
 export class Image {
- private Url: string;
+ public Url: string;
 
   constructor(Url: string) {
     this.Url = Url;

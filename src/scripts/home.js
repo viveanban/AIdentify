@@ -20,5 +20,5 @@ function uploadFiles()
       console.log('Upload is successful');
     }
     });
-  alert(blob.toString());
+  alert(JSON.stringify(blob));
 }
