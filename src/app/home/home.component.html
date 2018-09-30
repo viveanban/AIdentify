@@ -16,8 +16,9 @@
     <mat-card>
       <mat-card-title>Response</mat-card-title>
       <mat-card-content>
-        <input type="text" id="urlDisplay" (change)="sendRequest($event)" />
-        <p>Dummy text</p>
+        <input type="text" #uri id="urlDisplay"/>
+        <button mat-raised-button (click)="sendRequest(uri.value)">Search</button>
+        <h2 id="final"></h2>
       </mat-card-content>
     </mat-card>
   </div>
