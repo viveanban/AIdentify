@@ -1,7 +1,6 @@
 export class Image {
  private Url: string;
 
-
   constructor(Url: string) {
     this.Url = Url;
   }
