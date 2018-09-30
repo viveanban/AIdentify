@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
 
       document.getElementById("final").innerHTML = "Best Match: " + this.prediction.tagName +",<br>Confidence: " +this.prediction.probability.toString();
 
-      if(this.prediction.probability <= 0.95) {
+      if(this.prediction.probability <= 0.942) {
         document.getElementById("final").innerHTML += "<br>This is not one of the owner's item.";
         document.getElementById("final").style.color = "red";
       }
