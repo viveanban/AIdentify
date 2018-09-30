@@ -53,7 +53,7 @@ export class HomeComponent implements OnInit {
         document.getElementById("final").style.color = "red";
       }
       else {
-        document.getElementById("final").innerHTML += "<br>This is "+ this.prediction.tagName;
+        document.getElementById("final").innerHTML += "<br>This is "+ this.prediction.tagName + "'s water bottle.";
         document.getElementById("final").style.color = "green";
       }
 
