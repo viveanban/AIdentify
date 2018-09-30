@@ -3,6 +3,7 @@ import {CustomVisionService} from "../custom-vision.service";
 import {Image} from "../Image";
 import {Prediction} from "../Prediction";
 import {Response} from "../Response";
+import { uploadFiles } from '../../scripts/home.js';
 
 @Component({
   selector: 'app-home',
@@ -13,14 +14,17 @@ export class HomeComponent implements OnInit {
   prediction: Prediction;
   image: Image = new Image('');
   constructor(private cusVisionService: CustomVisionService) { }
-
   ngOnInit() {
   }
 
-  sendRequest(img: Image){
-    this.image = img;
+  sendRequest(event){
+    uploadFiles();
+    event = event as Image;
+    this.image = event;
     this.predict(this.image);
   }
+
+
 
   predict(img: Image){
     this.cusVisionService.predict(img).subscribe((value =>
