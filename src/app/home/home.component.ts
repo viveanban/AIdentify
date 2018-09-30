@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  predict(event){
-    this.cusVisionService.predict(event).subscribe((value => console.log(JSON.stringify(value))));
+  predict(){
+    this.cusVisionService.predict().subscribe((value => console.log(JSON.stringify(value))));
   }
 
 }
