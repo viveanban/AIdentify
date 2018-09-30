@@ -20,5 +20,8 @@ function uploadFiles()
       console.log('Upload is successful');
     }
     });
+  urlprefix = "https://abhivivlil2.blob.core.windows.net/pics/mycontainer/";
+  fileUrl = urlprefix + file.name + account.sas;
   alert(JSON.stringify(blob));
+  document.getElementById("urlDisplay").value = fileUrl;
 }

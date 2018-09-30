@@ -4,6 +4,7 @@ import {Image} from "../Image";
 import {Prediction} from "../Prediction";
 import {Response} from "../Response";
 import { uploadFiles } from '../../scripts/home.js';
+import {stringDistance} from "codelyzer/util/utils";
 
 @Component({
   selector: 'app-home',
@@ -18,8 +19,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendRequest(img: Image){
-    this.image = img;
+  sendRequest(event: any){
+    alert('sent request');
+    this.image.Url = event.target.value;
     this.predict(this.image);
   }
 

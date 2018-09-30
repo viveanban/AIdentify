@@ -3,7 +3,7 @@
     <label for="fileinput" class="custom-file-upload"><i class="material-icons">perm_media</i>
       {{buttonText}}
     </label>
-    <input type="file" id="fileinput" (change)="sendRequest($event)">
+    <input type="file" id="fileinput">
     <button mat-raised-button onclick="uploadFiles()">Upload</button>
   </div>
   <div class="item2">
@@ -16,6 +16,7 @@
     <mat-card>
       <mat-card-title>Response</mat-card-title>
       <mat-card-content>
+        <input type="text" id="urlDisplay" (change)="sendRequest($event)" />
         <p>Dummy text</p>
       </mat-card-content>
     </mat-card>
